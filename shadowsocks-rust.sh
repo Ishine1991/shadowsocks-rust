@@ -471,14 +471,12 @@ Link_QR(){
 	if [[ "${ipv4}" != "IPv4_Error" ]]; then
 		SSbase64=$(urlsafe_base64 "${cipher}:${password}@${ipv4}:${port}")
 		SSurl="ss://${SSbase64}"
-		SSQRcode="https://cli.im/api/qrcode/code?text=${SSurl}"
-		link_ipv4=" 链接  [IPv4]：${Red_font_prefix}${SSurl}${Font_color_suffix} \n 二维码[IPv4]：${Red_font_prefix}${SSQRcode}${Font_color_suffix}"
+		link_ipv4=" 链接  [IPv4]：${Red_font_prefix}${SSurl}${Font_color_suffix}"
 	fi
 	if [[ "${ipv6}" != "IPv6_Error" ]]; then
 		SSbase64=$(urlsafe_base64 "${cipher}:${password}@${ipv6}:${port}")
 		SSurl="ss://${SSbase64}"
-		SSQRcode="https://cli.im/api/qrcode/code?text=${SSurl}"
-		link_ipv6=" 链接  [IPv6]：${Red_font_prefix}${SSurl}${Font_color_suffix} \n 二维码[IPv6]：${Red_font_prefix}${SSQRcode}${Font_color_suffix}"
+		link_ipv6=" 链接  [IPv6]：${Red_font_prefix}${SSurl}${Font_color_suffix}"
 	fi
 }
 
